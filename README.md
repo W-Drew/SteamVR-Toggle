@@ -10,6 +10,8 @@ The program does not need to be open all the time -- it can be opened only when 
 
 # Modifying the program
 
+**Custom Install Path:** If you have a custom install directory for SteamVR (not C:\Program Files (x86)\Steam\steamapps\common\SteamVR), create a shortcut to the exe and pass the custom directory as a parameter. For instance, if SteamVR was installed to D:\Steam\steamapps\common\SteamVR, the "Target" field for the shortcut would be "..\SteamVR Fix.exe" "D:\Steam\steamapps\common\SteamVR"
+
 **Icons:** Since AutoHotkey (implementation language) doesn't support packaging icons into compiled executables, I injected them after compliation using a 3rd-party tool. If the executable is recompiled, the icons will be missing, and will need to manually be re-added. You may use any tool to add the icons to the EXE: the default icon needs to be in position `#1`, the enabled icon needs to be in position `#2`, and the disabled icon needs to be in position `#3`.
 
 Injecting icons in IcoFX 2: 
