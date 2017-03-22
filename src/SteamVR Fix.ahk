@@ -1,10 +1,15 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+﻿; Drew Warwick
+; 3/22/2017
+; https://github.com/EchoReaper/SteamVR-Fix/
+
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-;Default SteamVR install path. Change if you installed it elsewhere
-global steamVRPath := "C:\Program Files (x86)\Steam\steamapps\common\SteamVR"
+;Unmodified SteamVR install path. Pass in custom install path via parameter (see github repo for more details)
+param1 = %1%
+global steamVRPath := (param1 ? param1 : "C:\Program FIles (x86)\Steam\steamapps\common\SteamVR")
 
 getSteamVREnabled() {
 	defaultExists := InStr(FileExist(steamVRPath), "D") > 0 ;Default install dir exists
