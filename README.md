@@ -1,5 +1,5 @@
 # Description
-Utility to quickly disable/enable SteamVR to avoid it opening constantly when playing VR-compatible games without a HMD plugged in
+Utility to quickly disable/enable SteamVR to avoid it opening constantly when playing VR-compatible games without a HMD plugged in (see bug report [here](https://github.com/ValveSoftware/openvr/issues/428))
 
 # Using the program
 Program loads into system tray. Right click on it and use its context menu to: 1) Disable SteamVR, 2) Enable SteamVR, 3) Exit the program
